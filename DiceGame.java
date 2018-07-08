@@ -10,22 +10,27 @@ class DiceGame{
         Scanner sc = new Scanner(System.in);
         String name;
 
-        System.out.println("What is your name?");
-        System.out.print("> ");
+        try{
+            System.out.println("What is your name?");
+            System.out.print("> ");
 
-        name = sc.nextLine();
+            name = sc.nextLine();
 
-        System.out.println("Hello, " + name + "!");
+            System.out.println("Hello, " + name + "!");
 
-        System.out.println("Rolling the dice...");
-        System.out.println("Die 1: " + roll1);
-        System.out.println("Die 2: " + roll2);
-        System.out.println("Total value: " + (roll1 + roll2));
+            System.out.println("Rolling the dice...");
+            System.out.println("Die 1: " + roll1);
+            System.out.println("Die 2: " + roll2);
+            System.out.println("Total value: " + (roll1 + roll2));
 
-        if((roll1 + roll2) >= 7){
-            System.out.println(name + " won!");
-        }else{
-            System.out.println(name + " lost");
+            if((roll1 + roll2) >= 7){
+                System.out.println(name + " won!");
+            }else{
+                System.out.println(name + " lost");
+            }
+
+        }catch(Exception e){
+            System.out.println("Error " + e);
         }
     }
 }
