@@ -22,13 +22,6 @@ class DiceGame{
             System.out.println("Die 1: " + roll1);
             System.out.println("Die 2: " + roll2);
             System.out.println("Total value: " + (roll1 + roll2));
-
-            if((roll1 + roll2) >= 7){
-                System.out.println(name + " won!");
-            }else{
-                System.out.println(name + " lost");
-            }
-
         }catch(Exception e){
             System.out.println("Error " + e);
         }
